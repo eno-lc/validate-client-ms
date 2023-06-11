@@ -1,4 +1,4 @@
-package com.microservices.clients.fraud;
+package com.validate.client.response;
 
 import lombok.Builder;
 

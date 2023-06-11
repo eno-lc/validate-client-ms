@@ -1,16 +1,22 @@
 package com.validate.client.entity;
 
-import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-@Entity
-@Table(name = "fraudsters")
-public class Fraudsters {
+@Document(collection = "fraudsters")
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+public class Fraudster {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "client")
     private String client;
 
 }
